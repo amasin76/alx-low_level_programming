@@ -19,10 +19,15 @@ for (; first_digit <= NINE_IN_ASCII; first_digit++)
 
 for (; second_digit <= NINE_IN_ASCII; second_digit++)
 {
+
 if (first_digit >= second_digit)
 continue;
 putchar(first_digit);
 putchar(second_digit);
+
+/* Ascii table => 56 = 8 and 57 = 9 */
+if (first_digit == 56 && second_digit == 57)
+continue;
 putchar(',');
 putchar(' ');
 }
