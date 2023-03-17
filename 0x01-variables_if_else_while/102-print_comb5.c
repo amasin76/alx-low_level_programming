@@ -5,18 +5,20 @@
  */
 int main(void)
 {
+int i;
+int j;
 
-int i = 0, j = 1;
-
-while (i < 100)
+i = 0;
+while (i <= 99)
 {
-while (j < 100)
+j = i + 1;
+while (j <= 99)
 {
-putchar(i / 10 + '0');
-putchar(i % 10 + '0');
+putchar(48 + i / 10);
+putchar(48 + i % 10);
 putchar(' ');
-putchar(j / 10 + '0');
-putchar(j % 10 + '0');
+putchar(48 + j / 10);
+putchar(48 + j % 10);
 if (i != 98 || j != 99)
 {
 putchar(',');
@@ -25,7 +27,7 @@ putchar(' ');
 j++;
 }
 i++;
-j = i + 1;
 }
+putchar('\n');
 return (0);
 }
