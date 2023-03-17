@@ -25,12 +25,14 @@ continue;
 putchar(first_digit);
 putchar(second_digit);
 
-/* Ascii table => 56 = 8 and 57 = 9 */
-if (first_digit == 56 && second_digit == 57)
+/* Prevent adding comma on last element */
+if (first_digit == NINE_IN_ASCII - 1 && second_digit == NINE_IN_ASCII)
 continue;
+
 putchar(',');
 putchar(' ');
 }
+
 second_digit = ZERO_IN_ASCII;
 }
 
