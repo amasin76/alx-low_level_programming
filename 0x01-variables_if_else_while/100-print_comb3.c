@@ -14,7 +14,7 @@ const int NINE_IN_ASCII = 57;
 int first_digit = ZERO_IN_ASCII;
 int second_digit = ZERO_IN_ASCII;
 
-for (; first_digit <= NINE_IN_ASCII; first_digit++)
+for (; first_digit <= NINE_IN_ASCII - 1; first_digit++)
 {
 
 for (; second_digit <= NINE_IN_ASCII; second_digit++)
