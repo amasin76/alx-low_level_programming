@@ -6,20 +6,20 @@
 int main(void)
 {
 
-int zero_in_ascii = 48;
-const int NINE_IN_ASCII = 57;
+	int zero_in_ascii = 48;
+	const int NINE_IN_ASCII = 57;
 
-for (; zero_in_ascii <= NINE_IN_ASCII; zero_in_ascii++)
-{
+	for (; zero_in_ascii <= NINE_IN_ASCII; zero_in_ascii++)
+	{
 
-putchar(zero_in_ascii);
-if (zero_in_ascii == 57)
-break;
-putchar(',');
-putchar(' ');
-}
+		putchar(zero_in_ascii);
+		if (zero_in_ascii == 57)
+			break;
+		putchar(',');
+		putchar(' ');
+	}
 
-putchar('\n');
+	putchar('\n');
 
-return (0);
+	return (0);
 }

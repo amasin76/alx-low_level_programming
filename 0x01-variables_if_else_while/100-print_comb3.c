@@ -6,35 +6,35 @@
 int main(void)
 {
 
-const int ZERO_IN_ASCII = 48;
-const int NINE_IN_ASCII = 57;
+	const int ZERO_IN_ASCII = 48;
+	const int NINE_IN_ASCII = 57;
 
-int first_digit = ZERO_IN_ASCII;
-int second_digit = ZERO_IN_ASCII;
+	int first_digit = ZERO_IN_ASCII;
+	int second_digit = ZERO_IN_ASCII;
 
-for (; first_digit <= NINE_IN_ASCII - 1; first_digit++)
-{
+	for (; first_digit <= NINE_IN_ASCII - 1; first_digit++)
+	{
 
-for (; second_digit <= NINE_IN_ASCII; second_digit++)
-{
+		for (; second_digit <= NINE_IN_ASCII; second_digit++)
+		{
 
-if (first_digit >= second_digit)
-continue;
-putchar(first_digit);
-putchar(second_digit);
+			if (first_digit >= second_digit)
+				continue;
+			putchar(first_digit);
+			putchar(second_digit);
 
-/* Prevent adding comma on last element */
-if (first_digit == NINE_IN_ASCII - 1 && second_digit == NINE_IN_ASCII)
-continue;
+			/* Prevent adding comma on last element */
+			if (first_digit == NINE_IN_ASCII - 1 && second_digit == NINE_IN_ASCII)
+				continue;
 
-putchar(',');
-putchar(' ');
-}
+			putchar(',');
+			putchar(' ');
+		}
 
-second_digit = ZERO_IN_ASCII;
-}
+		second_digit = ZERO_IN_ASCII;
+	}
 
-putchar('\n');
+	putchar('\n');
 
-return (0);
+	return (0);
 }

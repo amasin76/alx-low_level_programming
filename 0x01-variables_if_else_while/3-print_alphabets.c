@@ -6,21 +6,21 @@
 int main(void)
 {
 
-char ch = 'a', chUpper = 'A';
+	char ch = 'a', chUpper = 'A';
 
-while (ch <= 'z')
-{
-putchar(ch);
-ch++;
-}
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		ch++;
+	}
 
-while (chUpper <= 'Z')
-{
-putchar(chUpper);
-chUpper++;
-}
+	while (chUpper <= 'Z')
+	{
+		putchar(chUpper);
+		chUpper++;
+	}
 
-putchar('\n');
+	putchar('\n');
 
-return (0);
+	return (0);
 }
