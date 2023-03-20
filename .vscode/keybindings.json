@@ -1,5 +1,18 @@
-{
-  "key": "f7",
-  "command": "workbench.action.tasks.runTask",
-  "args": "run-debug"
-}
+[
+  {
+    "key": "f7",
+    "command": "workbench.action.tasks.runTask",
+    "args": "run-debug"
+  },
+  // Switch terminal tabs
+  {
+    "key": "ctrl+pagedown",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalIsOpen"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalIsOpen"
+  }
+]
