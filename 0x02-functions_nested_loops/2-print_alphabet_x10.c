@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - lowercase alphabets
+ * print_alphabet_x10 - lowercase alphabets x10
  * Return: viod
  */
 
@@ -12,6 +12,7 @@ void print_alphabet_x10(void)
 	while (i < 10)
 	{
 		char c = 'a';
+
 		while (c <= 'z')
 		{
 			_putchar(c);
