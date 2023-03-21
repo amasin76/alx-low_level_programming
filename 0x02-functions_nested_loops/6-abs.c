@@ -6,7 +6,7 @@
  * Return: int positive
  */
 
-int _abs(num)
+int _abs(int num)
 {
 	return (abs(num));
 }
