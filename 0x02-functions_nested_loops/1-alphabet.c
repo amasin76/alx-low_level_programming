@@ -2,7 +2,7 @@
 
 /**
  * print_alphabet - lowercase alphabets
- * Return: Always 0 (Success)
+ * Return: viod
  */
 
 void print_alphabet(void)
