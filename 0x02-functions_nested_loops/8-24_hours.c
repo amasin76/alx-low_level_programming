@@ -6,9 +6,10 @@
 
 void jack_bauer(void)
 {
-	for (int i = 0; i <= 23; i++)
+	int i = 0, j = 0;
+	for (i; i <= 23; i++)
 	{
-		for (int j = 0; j <= 23; j++)
+		for (j; j <= 23; j++)
 		{
 			_putchar(48 + i / 10);
 			_putchar(48 + i % 10);
