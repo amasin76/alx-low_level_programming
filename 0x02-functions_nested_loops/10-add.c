@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * print_last_digit - self explian
+ * add - self explian
  * @a: int first num
- * @num: int second num
- * Return: int digit
+ * @b: int second num
+ * Return: int sum
  */
 
 int add(int a, int b)
 {
-	return a + b;
+	return (a + b);
 }
