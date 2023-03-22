@@ -1,5 +1,11 @@
 #include <stdio.h>
-int main()
+
+/**
+ * main - entry point
+ * description - print the first 50 fibonacci numbers
+ * Return: Always 0 (success)
+ */
+int main(void)
 {
 	int s1 = 0, s2 = 1, nextSeq = 0, n = 50;
 
