@@ -6,12 +6,12 @@
 
 void print_times_table(int t)
 {
+	int num, pos, result;
+
 	if (t <= 0 || t >= 15)
 	{
 		return;
 	}
-
-	int num, pos, result;
 
 	for (num = 0; num <= t; num++)
 	{
