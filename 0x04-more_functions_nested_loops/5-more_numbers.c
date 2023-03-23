@@ -11,12 +11,8 @@ void print_to_14(void)
 	{
 		/* Check n is 2 digits*/
 		if (n > 9)
-		{
 			_putchar(n / 10 + 48);
-			_putchar(n % 10 + 48);
-		}
-		else
-			_putchar(n % 10 + 48);
+		_putchar(n % 10 + 48);
 		n++;
 	}
 	_putchar('\n');
