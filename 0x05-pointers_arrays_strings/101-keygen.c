@@ -18,12 +18,12 @@ int main(void)
 
 	/* reserve 50 its enough to achieve 2772 with alphabets */
 	char str[50];
-	int i = 0, randNum = 0, sum = 0;
+	int i, randNum = 0, sum = 0;
 
 	/* set seed to current time */
 	srand(time(0));
 
-	for (i; sum <= (2772 - 128); i++)
+	for (i = 0; sum <= (2772 - 128); i++)
 	{
 		/* generate upper alphabets (in ascii 65->90) */
 		randNum = (rand() % 25) + 65;
