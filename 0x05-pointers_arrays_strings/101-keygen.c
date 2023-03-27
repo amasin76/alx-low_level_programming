@@ -16,11 +16,12 @@ int main(void)
 	 *🔰 so, we need to generate sum of chars = 2772 to bybass
 	 */
 
-	/* set seed to current time */
-	srand(time(0));
 	/* reserve 50 its enough to achieve 2772 with alphabets */
 	char str[50];
 	int i = 0, randNum = 0, sum = 0;
+
+	/* set seed to current time */
+	srand(time(0));
 
 	for (i; sum <= (2772 - 128); i++)
 	{
