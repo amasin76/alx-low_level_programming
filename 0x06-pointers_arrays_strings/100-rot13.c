@@ -2,7 +2,7 @@
 
 /**
  * rot13 - Caesar Cipher
- * @s: the string to encrypt
+ * @str: the string to encrypt
  * Return: the encrypted string
  **/
 char *rot13(char *str)
@@ -20,5 +20,5 @@ char *rot13(char *str)
 			str[i] -= 13;
 	}
 
-	return str;
+	return (str);
 }
