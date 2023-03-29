@@ -7,7 +7,7 @@
  **/
 char *rot13(char *str)
 {
-	int key = 13, len = 0, i = 0;
+	int len = 0, i = 0;
 
 	while (str[len])
 		len++;
