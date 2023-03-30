@@ -14,14 +14,12 @@ void reverse_str(char *str, int len);
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, w_n1 = _strlen(n1), w_n2 = _strlen(n2), width, sum, carry;
-
-	width = w_n1 > w_n2 ? w_n1 : w_n2;
+	int i, w_n1 = _strlen(n1), w_n2 = _strlen(n2), sum, carry;
 
 	if (w_n1 >= size_r || w_n2 >= size_r)
 		return (0);
 
-	for (i = 0; i < width; i++)
+	for (i = 0; i < w_n1 || i < w_n2; i++)
 	{
 		char cn1 = getcharval(n1, i);
 		char cn2 = getcharval(n2, i);
