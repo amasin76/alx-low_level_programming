@@ -23,10 +23,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	for (i = 0; i < width; i++)
 	{
-		char ca = getcharval(n1, i);
-		char cb = getcharval(n2, i);
-		/* printf("%d %d\n", ca, cb); */
-		sum = ca + cb + carry;
+		char cn1 = getcharval(n1, i);
+		char cn2 = getcharval(n2, i);
+
+		sum = cn1 + cn2 + carry;
 		carry = 0;
 		if (sum > 9)
 		{
