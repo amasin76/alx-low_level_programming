@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stddef.h>
 
-int compare(const char *X, const char *Y);
-
 /**
  * *_strstr - locates a substring
  * @haystack: string to search in
@@ -12,24 +10,16 @@ int compare(const char *X, const char *Y);
  */
 char *_strstr(char *haystack, char *needle)
 {
-	for (; *haystack; haystack++)
-		if ((*haystack == *needle) && compare(haystack, needle))
-			return (haystack);
+	int i = 0, j = 0;
+
+	for (; haystack[i]; i++)
+	{
+		for (; needle[j]; j++)
+			if (haystack[i + j] != needle[j])
+				break;
+		if (!needle[j])
+			return (&haystack[i]);
+	}
 
 	return (NULL);
-}
-
-/**
- * compare - self explain
- * @haystack: first string
- * @needle: second string
- * Return: true if `X` and `Y` are the same
- */
-int compare(const char *haystack, const char *needle)
-{
-	for (; *haystack && *needle; haystack++, needle++)
-		if (*haystack == *needle)
-			return (1);
-
-	return (*needle == '\0');
 }
