@@ -12,28 +12,24 @@ int compare(const char *X, const char *Y);
  */
 char *_strstr(char *haystack, char *needle)
 {
-	while (*haystack)
-	{
-		if (*haystack == *needle)
+	for (; *haystack; haystack++)
+		if ((*haystack == *needle) && compare(haystack, needle))
 			return (haystack);
-
-		haystack++;
-	}
 
 	return (NULL);
 }
 
 /**
  * compare - self explain
- * @X: first string
- * @Y: second string
+ * @haystack: first string
+ * @needle: second string
  * Return: true if `X` and `Y` are the same
  */
-int compare(const char *X, const char *Y)
+int compare(const char *haystack, const char *needle)
 {
-	for (; *X && *Y; X++, Y++)
-		if (*X != *Y)
-			return (0);
+	for (; *haystack && *needle; haystack++, needle++)
+		if (*haystack == *needle)
+			return (1);
 
-	return (*Y == '\0');
+	return (*needle == '\0');
 }
