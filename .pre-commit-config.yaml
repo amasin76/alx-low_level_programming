@@ -8,8 +8,9 @@ repos:
       - id: check-merge-conflict
       - id: detect-private-key
       - id: end-of-file-fixer
+        files: \.(c|h)$
       - id: mixed-line-ending
-      - id: trailing-whitespace  
+      - id: trailing-whitespace
 
   - repo: local
     hooks:
