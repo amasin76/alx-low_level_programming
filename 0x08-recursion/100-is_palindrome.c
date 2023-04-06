@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <main.h>
 
 int _strlen(const char *s);
 int is_palindrome_helper(char *s, int start, int end);
@@ -42,10 +42,8 @@ int is_palindrome_helper(char *s, int start, int end)
  **/
 int _strlen(const char *s)
 {
-	int len = 0;
+	if (!*s)
+		return (0);
 
-	while (s[len])
-		len++;
-
-	return (len);
+	return (1 + _strlen(s + 1));
 }
