@@ -44,13 +44,23 @@
   },
   "#inc": {
     "prefix": "inc",
-    "body": ["#include <$1>"],
+    "body": ["#include <$1.h>"],
     "description": "Code snippet for #include < >"
   },
   "#incp": {
     "prefix": "incp",
-    "body": ["#include \"$1\""],
+    "body": ["#include \"$1.h\""],
     "description": "Code snippet for #include \" \""
+  },
+  "#incio": {
+    "prefix": "#io",
+    "body": ["#include <stdio.h>\n"],
+    "description": "Code snippet for include stdio.h"
+  },
+  "#incm": {
+    "prefix": "#m",
+    "body": ["#include \"main.h\"\n"],
+    "description": "Code snippet for include main.h"
   },
   "create function": {
     "prefix": "fn",
