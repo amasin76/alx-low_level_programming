@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	}
 
 	cents = atoi(argv[1]);
-	if (cents <= 0)
+	if (cents < 0)
 	{
 		printf("0\n");
 		return (0);
@@ -30,6 +30,9 @@ int main(int argc, char *argv[])
 	{
 		coins += cents / values[i];
 		cents %= values[i];
+
+		if (cents == 0)
+			break;
 	}
 
 	printf("%d\n", coins);
