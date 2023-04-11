@@ -54,12 +54,12 @@
   },
   "#incio": {
     "prefix": "#io",
-    "body": ["#include <stdio.h>\n"],
+    "body": ["#include <stdio.h>"],
     "description": "Code snippet for include stdio.h"
   },
   "#incm": {
     "prefix": "#m",
-    "body": ["#include \"main.h\"\n"],
+    "body": ["#include \"main.h\""],
     "description": "Code snippet for include main.h"
   },
   "create function": {
