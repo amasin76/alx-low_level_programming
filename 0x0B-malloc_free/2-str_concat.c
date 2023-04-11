@@ -1,5 +1,3 @@
-#include "../0x05-pointers_arrays_strings/2-strlen.c"
-#include "../0x07-pointers_arrays_strings/1-memcpy.c"
 #include "main.h"
 #include <stdlib.h>
 
@@ -12,21 +10,27 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *new_str;
-	int len_s1 = 0, len_s2 = 0;
+	int i = 0, j = 0, len_s1 = 0, len_s2 = 0;
 
 	(s1 == NULL) && (s1 = "");
 	(s2 == NULL) && (s2 = "");
 
-	len_s1 = _strlen(s1);
-	len_s2 = _strlen(s2);
+	while (s1[len_s1])
+		len_s1++;
+	while (s2[len_s2])
+		len_s2++;
 
 	new_str = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
 
 	if (new_str == NULL)
 		return (NULL);
 
-	_memcpy(new_str, s1, len_s1);
-	_memcpy(new_str + len_s1, s2, len_s2 + 1);
+	for (; i < len_s1; i++)
+		new_str[i] = s1[i];
+	for (; j < len_s2; j++, i++)
+		new_str[i] = s2[j];
+
+	new_str[i] = '\0';
 
 	return (new_str);
 }
