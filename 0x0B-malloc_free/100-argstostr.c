@@ -1,4 +1,3 @@
-#include "../0x0B-malloc_free/2-str_concat.c"
 #include "main.h"
 #include <stdlib.h>
 
@@ -11,7 +10,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *str = NULL;
-	int i, j, len = 0;
+	int i, j, k = 0, len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -21,7 +20,7 @@ char *argstostr(int ac, char **av)
 			len++;
 
 	/* for newline characters will added to the final string */
-	len += (ac + 1);
+	len += ac;
 
 	str = malloc(sizeof(char) * len);
 	if (str == NULL)
@@ -29,9 +28,11 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		str = str_concat(str, av[i]);
-		str = str_concat(str, "\n");
+		for (j = 0; av[i][j]; j++, k++)
+			str[k] = av[i][j];
+		str[k++] = '\n';
 	}
+	str[k] = '\0';
 
 	return (str);
 }
