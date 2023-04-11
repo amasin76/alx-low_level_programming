@@ -19,8 +19,8 @@ char *argstostr(int ac, char **av)
 		for (j = 0; av[i][j]; j++)
 			len++;
 
-	/* for newline characters will added to the final string */
-	len += ac;
+	/* for newlines and null-termenator will added to the final string */
+	len += (ac + 1);
 
 	str = malloc(sizeof(char) * len);
 	if (str == NULL)
