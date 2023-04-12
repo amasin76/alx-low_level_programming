@@ -35,17 +35,20 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
+
 	words = count_words(str);
 	if (words == 0)
 		return (NULL);
+
 	p = malloc(sizeof(char *) * (words + 1));
 	if (p == NULL)
 		return (NULL);
+
 	p[words] = NULL;
 	for (i = 0, k = 0; k < words; k++)
 	{
-		while (str[i] == ' ')
-			i++;
+		for (; str[i] == ' '; i++)
+			;
 		for (j = i; str[j] != ' ' && str[j]; j++)
 			;
 		p[k] = malloc(j - i + 1);
@@ -58,6 +61,7 @@ char **strtow(char *str)
 		}
 		for (l = 0; l < j - i; l++)
 			p[k][l] = str[i + l];
+
 		p[k][l] = '\0';
 		i = j;
 	}
