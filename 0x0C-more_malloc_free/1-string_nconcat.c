@@ -23,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= len_s2)
 		return (str_concat(s1, s2));
 
-	s2_slice = malloc(sizeof(char) * (n + 1));
+	s2_slice = malloc(sizeof(char) * (_strlen(s1) + n + 1));
 	if (s2_slice == NULL)
 		return (NULL);
 
@@ -59,7 +59,7 @@ char *_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int i = 0;
 
 	while (src[i])
-		dest[i++] = src[n++];
+		dest[n++] = src[i++];
 
 	return (dest);
 }
