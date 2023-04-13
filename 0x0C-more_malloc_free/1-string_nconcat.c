@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int _strlen(char *s);
-char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, unsigned int n);
 char *str_concat(char *s1, char *s2);
 
 /**
@@ -54,15 +54,12 @@ int _strlen(char *s)
  * @n: the number of bytes
  * Return: dest
  */
-char *_strncpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, unsigned int n)
 {
-	int i = 0;
+	unsigned int i = 0;
 
-	for (; src[i] && i < n; i++)
-		dest[i] = src[i];
-
-	for (; dest[i] && i < n; i++)
-		dest[i] = '\0';
+	while (src[i])
+		dest[i++] = src[n++];
 
 	return (dest);
 }
@@ -81,13 +78,10 @@ char *str_concat(char *s1, char *s2)
 	(s1 == NULL) && (s1 = "");
 	(s2 == NULL) && (s2 = "");
 
-	while (s1[len_s1])
-		len_s1++;
-	while (s2[len_s2])
-		len_s2++;
+	len_s1 = _strlen(s1);
+	len_s2 = _strlen(s2);
 
 	new_str = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
-
 	if (new_str == NULL)
 		return (NULL);
 
