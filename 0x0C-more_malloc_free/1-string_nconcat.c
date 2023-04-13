@@ -1,7 +1,7 @@
+#include "main.h"
 #include "../0x05-pointers_arrays_strings/2-strlen.c"
 #include "../0x06-pointers_arrays_strings/2-strncpy.c"
 #include "../0x0B-malloc_free/2-str_concat.c"
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,7 +21,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len_s2 = _strlen(s2);
 
 	if (n >= len_s2)
-		return str_concat(s1, s2);
+		return (str_concat(s1, s2));
 
 	s2_slice = malloc(sizeof(char) * (n + 1));
 	if (s2_slice == NULL)
@@ -29,5 +29,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	_strncpy(s2_slice, s2, n);
 
-	return str_concat(s1, s2_slice);
+	return (str_concat(s1, s2_slice));
 }
