@@ -3,6 +3,7 @@
   "editor.tabSize": 4,
   "editor.insertSpaces": false,
   "editor.detectIndentation": true,
+  "files.insertFinalNewline": true,
 
   // Limit column width
   "editor.wordWrap": "on",
