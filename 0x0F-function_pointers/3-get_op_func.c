@@ -15,20 +15,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+	int i;
 
-	switch (s[0])
-    {
-        case '+':
-            return (ops[0].f);
-        case '-':
-            return (ops[1].f);
-        case '*':
-            return (ops[2].f);
-        case '/':
-            return (ops[3].f);
-        case '%':
-            return (ops[4].f);
-        default:
-            return (NULL);
-    }
+	i=0;
+
+	while (ops[i].op){
+		if (strcmp(ops[i].op, s) == 0)
+			return (ops[i].f);
+		i++;
+	}
+
+	return (NULL);
 }
