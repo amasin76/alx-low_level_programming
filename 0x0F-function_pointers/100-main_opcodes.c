@@ -7,7 +7,7 @@
  * @argv: array of arguments passed to program.
  * Return: 0 on success, 1 or 2 on error.
  */
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
 	int i = 0, n;
 	char *arr;
