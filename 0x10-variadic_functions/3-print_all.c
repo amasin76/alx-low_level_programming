@@ -21,11 +21,14 @@ void print_all(const char *const format, ...)
 {
 	va_list args;
 	int i = 0;
-	char *str;
+	char *str = NULL;
 
 	va_start(args, format);
 
-	while (format[i])
+	if (!format)
+		return;
+
+	while (format && format[i])
 	{
 		switch (format[i])
 		{
@@ -40,12 +43,14 @@ void print_all(const char *const format, ...)
 			break;
 		case 's':
 			str = va_arg(args, char *);
+			if (!str)
+				printf("(nil)");
 			if (str)
 				printf("%s", str);
-			else
-				printf("(nil)");
 			break;
 		}
+		if (format[i - 1] && format[i + 1])
+			printf(", ");
 		i++;
 	}
 	printf("\n");
