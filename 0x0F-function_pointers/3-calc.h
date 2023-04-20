@@ -6,9 +6,9 @@
 #include <string.h>
 
 /**
- * op_t: Struct to store operator and function pointer.
- * op: Pointer to a character array containing the operator.
- * f: Func pointer that takes two int's as parameters and returns int.
+ * struct op - Struct to store operator and function pointer.
+ * @op: Pointer to a character array containing the operator.
+ * @f: Func pointer that takes two int's as parameters and returns int.
  */
 typedef struct op
 {
