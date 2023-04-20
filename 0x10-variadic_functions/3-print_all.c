@@ -40,7 +40,10 @@ void print_all(const char *const format, ...)
 			break;
 		case 's':
 			str = va_arg(args, char *);
-			str ? printf("%s", str) : printf("(nil)");
+			if (str)
+				printf("%s", str);
+			else
+				printf("(nil)");
 			break;
 		}
 		i++;
