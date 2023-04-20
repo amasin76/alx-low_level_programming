@@ -45,8 +45,7 @@ void print_all(const char *const format, ...)
 			str = va_arg(args, char *);
 			if (!str)
 				printf("(nil)");
-			if (str)
-				printf("%s", str);
+			printf("%s", str);
 			break;
 		}
 		if (format[i - 1] && format[i + 1])
