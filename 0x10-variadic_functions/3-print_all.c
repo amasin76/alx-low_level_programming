@@ -19,11 +19,10 @@
  */
 void print_all(const char *const format, ...)
 {
+	int i = 0;
+	char *str = NULL, *sep = "";
+
 	va_list args;
-	char *s_val = NULL;
-	char c_val;
-	int i_val, i = 0;
-	float f_val;
 
 	va_start(args, format);
 
@@ -32,31 +31,28 @@ void print_all(const char *const format, ...)
 		switch (format[i])
 		{
 		case 'c':
-			c_val = va_arg(args, int);
-			printf("%c", c_val);
+			printf("%s%c", sep, va_arg(args, int));
 			break;
 		case 'i':
-			i_val = va_arg(args, int);
-			printf("%d", i_val);
+			printf("%s%d", sep, va_arg(args, int));
 			break;
 		case 'f':
-			f_val = va_arg(args, double);
-			printf("%f", f_val);
+			printf("%s%f", sep, va_arg(args, double));
 			break;
 		case 's':
-			s_val = va_arg(args, char *);
-			if (!s_val)
-				printf("(nil)");
-			else
-				printf("%s", s_val);
+			str = va_arg(args, char *);
+			if (!str)
+				str = "(nil)";
+			printf("%s%s", sep, str);
 			break;
 		default:
-			break;
+			i++;
+			continue;
 		}
-		if (format[i - 1] && format[i + 1])
-			printf(", ");
+		sep = ", ";
 		i++;
 	}
-	putchar('\n');
+
+	printf("\n");
 	va_end(args);
 }
