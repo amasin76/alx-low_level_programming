@@ -1,5 +1,5 @@
 section .data
-    message db 'Hello, Holberton', 0Ah, 0
+    message_str db 'Hello, Holberton', 10, 0
 
 section .text
     global main
@@ -8,7 +8,7 @@ section .text
 
 main:
     ; prepare arguments for printf
-    mov rdi, message
+    mov rdi, message_str
     xor rax, rax
 
     ; call printf
