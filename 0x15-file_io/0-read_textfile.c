@@ -12,11 +12,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t n_read, n_written;
 	char *buffer;
 
-	if (!filename || (fd = open(filename, O_RDONLY)) == -1)
+	fd = open(filename, O_RDONLY);
+	if (!filename || fd == -1)
 		return (0);
 
+	n_read = read(fd, buffer, letters);
 	buffer = malloc(sizeof(char) * letters);
-	if (!buffer || (n_read = read(fd, buffer, letters)) == -1)
+	if (!buffer || n_read == -1)
 		return (0);
 
 	n_written = write(STDOUT_FILENO, buffer, n_read);
