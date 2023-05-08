@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <sys/stat.h>
 
 /**
@@ -24,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		while (text_content[len++])
 			;
-		n_written = write(fd, text_content, len);
+		n_written = write(fd, text_content, len - 1);
 		if (n_written == -1)
 			return (-1);
 	}
