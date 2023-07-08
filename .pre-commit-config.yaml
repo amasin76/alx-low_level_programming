@@ -21,8 +21,6 @@ repos:
         language: system
         files: \.(c|h)$
 
-  - repo: local
-    hooks:
       - id: betty-doc
         name: betty doc
         description: Check betty doc.
